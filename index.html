@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <!-- CDN LINK -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <h2>Registration Form</h2>
+      <p>Please fill out this form with required information</p>
+    </header>
+    <!-- FORM -->
+    <form name="submit-to-google-sheet">
+      <!-- PERSONAL INFO -->
+      <fieldset>
+        <label for="fname">
+          Enter Your First Name:
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            autocomplete="off"
+            required
+            oninvalid="this.setCustomValidity('Please enter Your First name')"
+            oninput="this.setCustomValidity('')"
+          />
+        </label>
+        <label for="lname">
+          Enter Your Last Name:
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            autocomplete="off"
+            required
+            oninvalid="this.setCustomValidity('Please enter Your Last name')"
+            oninput="this.setCustomValidity('')"
+          />
+        </label>
+        <label for="email">
+          Enter Your Email:
+          <input type="email" name="email" id="email" checked required />
+        </label>
+        <div class="password-container">
+          <label for="password"
+            >Create Your Password:
+            <input
+              type="password"
+              name="password"
+              id="password"
+              maxlength="5"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              required
+              oninvalid="this.setCustomValidity('Only 0-9')"
+              oninput="this.setCustomValidity('')"
+            />
+          </label>
+          <i class="fa-solid fa-eye" id="eye"></i>
+        </div>
+      </fieldset>
+      <!-- GENDER TYPE -->
+      <fieldset>
+        <label for="male">
+          <input
+            class="inline"
+            type="radio"
+            name="gender"
+            value="male"
+            id="male"
+          />
+          Male</label
+        ><br />
+        <label for="female">
+          <input
+            class="inline"
+            type="radio"
+            name="gender"
+            value="female"
+            id="female"
+          />
+          Female</label
+        ><br />
+        <label for="terms">
+          <input
+            class="inline"
+            type="checkbox"
+            name="terms"
+            id="terms"
+            required
+          />
+          I accept the
+          <a
+            class="termsandconditions"
+            href="./pages/terms.html"
+            title="click to view terms and conditions"
+            >terms and conditions</a
+          ></label
+        >
+      </fieldset>
+      <!-- OTHER REQUIREMENT -->
+      <fieldset>
+        <label for="file"
+          >Upload profile picture: <input type="file" name="file" id="file"
+        /></label>
+        <label for="age"
+          >Input your age (years):
+          <input type="number" name="age" id="age" min="18" max="1000"
+        /></label>
+        <label for="option"
+          >How did you hear about us?
+          <select name="option" id="option" onchange="CheckOption(this.value);">
+            <option value="" selected>School</option>
+            <option value="2">Friends and Family</option>
+            <option value="3">Church</option>
+            <option value="4">Social Platform</option>
+            <option value="others">Others</option>
+          </select>
+          <input type="text" name="others" id="others" style="display: none" />
+        </label>
+
+        <label for="bio"
+          >Provide a bio: <br /><textarea
+            name="bio"
+            id="bio"
+            cols="100"
+            rows="0"
+            placeholder="Hello, my name..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <!-- SUBMIT BUTTON -->
+      <div class="container">
+        <div class="center">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+    <!-- JAVASCRIPT LINK -->
+    <script src="./javascript/java.js"></script>
+    <script src="./javascript/sendEmail.js"></script>
+  </body>
+</html>

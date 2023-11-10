@@ -1,0 +1,169 @@
+/* GLOBAL RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* Defines 10px as 1rem */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: #1b1b32;
+  color: white;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h2,
+p {
+  text-align: center;
+  margin: 3rem 2rem;
+}
+
+form {
+  margin: 0 20rem 10rem 20rem; /* Using 100% width */
+}
+
+fieldset {
+  border: none;
+  border-bottom: 3px solid #3b3b4f;
+  padding: 5rem 0;
+}
+
+fieldset:last-of-type {
+  border-bottom: none;
+}
+
+/* SHOW/HIDE PASSWORD */
+.password-container {
+  width: 100%;
+  position: relative;
+}
+
+.password-container input[type="password"] {
+  padding: 0.6rem;
+}
+
+.fa-eye {
+  position: absolute;
+  top: 50%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+}
+
+label,
+input,
+select,
+textarea {
+  margin: 1rem 0;
+  -webkit-border-radius: none;
+  border-radius: none;
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  font-family: monospace;
+  font-size: 2rem;
+}
+
+input,
+select {
+  background-color: #0a0a23;
+  color: white;
+  -webkit-border: none;
+  border: none;
+  outline: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+  padding: 0.6rem;
+}
+
+.inline {
+  width: unset;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  transform: scale(1);
+}
+
+input[type="file"] {
+  transform: scale(1);
+  color: transparent;
+}
+
+.termsandconditions {
+  color: white;
+}
+
+textarea {
+  background-color: #0a0a23;
+  padding-bottom: 5rem;
+  color: white;
+  resize: none;
+  outline: none;
+  border: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+}
+
+/*BUTTON*/
+.container {
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+button {
+  background-color: #3b3b4f;
+  color: white;
+  border-color: white;
+  font-size: 2rem;
+  margin-top: 5rem;
+  cursor: pointer;
+  padding: 0.5rem 5rem;
+}
+/* Mobile */
+@media screen and (max-width: 20em) {
+  form {
+    margin: 5rem 5rem 10rem 5rem;
+  }
+
+  html {
+    font-size: 50%;
+  }
+  .fa-eye {
+    /* position: absolute; */
+    top: 50%;
+    right: 4%;
+    cursor: pointer;
+    color: lightgray;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 75em) {
+  form {
+    margin: 5rem 5rem 10rem 5rem;
+  }
+
+  html {
+    font-size: 60%;
+  }
+}
